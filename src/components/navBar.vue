@@ -5,7 +5,17 @@
       <router-link to="/questionario" class="navbar-link navbar-borda"
         >Questionario</router-link
       >
-      <router-link to="/contatos" class="navbar-link">Contatos</router-link>
+      <router-link
+        to="/#Ajuda-Area"
+        class="navbar-link"
+        @click="selectClassAjuda"
+        >Ajuda</router-link
+      >
+      <!--
+      //  <router-link :to="{ name: 'inicio', hash: '#Ajuda' }" class="navbar-link"
+      //  >Ajuda</router-link
+      //
+      -->
     </nav>
   </div>
 </template>
@@ -14,6 +24,15 @@
 export default {
   name: "navBar",
   components: {},
+
+  methods: {
+    selectClassAjuda() {
+      if (this.$route.hash) {
+        const el = document.querySelector(this.$route.hash);
+        el && el.scrollIntoView();
+      }
+    },
+  },
 };
 </script>
 
@@ -59,10 +78,9 @@ export default {
 */
 
 @media (max-width: 550px) {
-
   .navbar-main {
-  height: 150px;
-}
+    height: 150px;
+  }
   .navbar-container-links {
     flex-direction: column;
     row-gap: 15px;

@@ -14,7 +14,7 @@
         <router-link to="/questionario" class="links-texto"
           >Questionario</router-link
         >
-        <a href="#Ajuda" class="links-texto">Ajuda</a>
+        <a href="#Ajuda-Area" class="links-texto">Ajuda</a>
       </div>
     </div>
   </div>

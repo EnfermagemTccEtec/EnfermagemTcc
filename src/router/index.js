@@ -11,14 +11,6 @@ const routes = [
     },
   },
   {
-    path: "/contatos",
-    name: "contatos",
-    component: () => import("../views/ContatosView.vue"),
-    meta: {
-      title: "Contato",
-    },
-  },
-  {
     path: "/questionario",
     name: "questionario",
     component: () => import("../views/QuestionarioView.vue"),

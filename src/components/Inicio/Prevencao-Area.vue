@@ -5,6 +5,12 @@
         <h1 class="text-title-prevencao">Prevenção</h1>
       </div>
     </div>
+
+    <div>
+      <div>Praticar exercícios físicos</div>
+      <div>Sono de qualidade</div>
+      <div>Alimentação saudável</div>
+    </div>
   </div>
 </template>
 
