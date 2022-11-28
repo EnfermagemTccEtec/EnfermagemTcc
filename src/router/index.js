@@ -26,6 +26,14 @@ const routes = [
       title: "Resultado",
     },
   },
+  {
+    path: "/:catchAll(.*)",
+    name: "ErrorPage",
+    component: () => import("../views/ErrorView.vue"),
+    meta: {
+      title: "ErrorPage",
+    },
+  },
 ];
 
 const router = createRouter({
