@@ -18,6 +18,9 @@
       </div>
     </div>
   </div>
+  <div class="ondas-inicial">
+    <img class="onda1" src="../../assets/wave-index.svg" />
+  </div>
 </template>
 
 <script>
@@ -35,6 +38,7 @@ export default {
   justify-content: space-around;
   align-items: center;
   border-bottom: 2px solid #f1f1f1;
+  flex-wrap: wrap;
 }
 .imagem-areainicio {
   width: 600px;
@@ -70,8 +74,78 @@ export default {
   border-radius: 5px;
   border: 2px solid #089bab;
   transition: 0.3s;
+  position: relative;
 }
 .links-texto:hover {
   transform: scale(1.05);
+}
+
+.links-texto::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: url("../../assets/botões-hover-index.svg");
+  background-size: 100% 100%;
+  position: absolute;
+  left: 80px;
+  top: 8px;
+  transition: 0.5s ease;
+  opacity: 0;
+  color: wheat;
+}
+
+.links-texto:hover::before {
+  content: "";
+  width: 40px;
+  height: 40px;
+  background: url("../../assets/botões-hover-index.svg");
+  background-size: 100% 100%;
+  position: absolute;
+  left: 40px;
+  top: 8px;
+  transition: 0.5s ease;
+  opacity: 100%;
+  color: wheat;
+}
+
+.ondas-inicial {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  background-color: #089bab;
+  margin-bottom: 0px;
+  z-index: 0;
+
+  .onda2 {
+    width: 100%;
+    position: absolute;
+    bottom: -150px;
+  }
+
+  .onda1 {
+    width: 100%;
+    position: absolute;
+    bottom: 200px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .main-container-areainicio {
+    height: 1200px;
+  }
+}
+
+@media (max-width: 750px) {
+  .imagem-areainicio {
+    width: 400px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 400px) {
+  .imagem-areainicio {
+    width: 350px;
+    height: 250px;
+  }
 }
 </style>

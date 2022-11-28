@@ -128,7 +128,19 @@ export default {
   min-height: 915px;
   align-items: center;
   justify-content: center;
-  border-bottom: 2px solid #f1f1f1;
+  border-bottom: 2px solid #089bab;
+
+  background: url("../../assets/circle-scatter-haikei.svg");
+  z-index: 0;
+  animation: fundo 350s ease-in-out infinite alternate;
+  backface-visibility: 30%;
+  background-color: rgba(10, 23, 55, 0.5);
+}
+
+@keyframes fundo {
+  to {
+    background-position: 100% 600%;
+  }
 }
 
 .container-title-sistomasArea {
@@ -140,6 +152,7 @@ export default {
   justify-content: center;
   background-color: #fff;
   border-bottom: 2px solid #089bab;
+  z-index: 1;
 }
 
 .title-sintomasArea {
@@ -164,9 +177,88 @@ export default {
   width: 700px;
   display: flex;
   justify-content: center;
-  border: 1px solid #000;
+  border: 1px solid #7b83eb;
   border-radius: 5px;
   margin: 20px 0px 20px 0px;
+  z-index: 1;
+  background-color: rgb(255, 255, 255);
+  position: relative;
+  transition: 0.5s ease;
+}
+
+.card-informacao:hover {
+  transition: 0.5s ease;
+  border: 1px solid #7b83eb;
+}
+
+.card-informacao::before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background: url("../../assets/circulo-box-index.svg");
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: 6px 10px;
+  position: absolute;
+  left: -25px;
+  top: -20px;
+  border: 1px solid #1c237e;
+  border-radius: 50%;
+  padding: 5px;
+  z-index: 1;
+  transition: 0.5s ease;
+}
+
+.card-informacao::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  background-size: 100%;
+  background-position: center;
+  position: absolute;
+  left: -25px;
+  top: -20px;
+  border: 1px solid #1c237e;
+  border-radius: 50%;
+  padding: 5px;
+  z-index: 0;
+  transition: 0.5s ease;
+}
+
+.card-informacao:hover::before {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background: url("../../assets/circulo-box-index-hover.svg");
+  background-repeat: no-repeat;
+  background-size: 80%;
+  background-position: 6px 10px;
+  position: absolute;
+  left: -25px;
+  top: -20px;
+  border: 1px solid #1c237e;
+  border-radius: 50%;
+  padding: 5px;
+  z-index: 1;
+  transition: 0.5s ease;
+}
+
+.card-informacao:hover::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  background-size: 100%;
+  background-position: center;
+  position: absolute;
+  left: -25px;
+  top: -20px;
+  border: 1px solid #1c237e;
+  border-radius: 50%;
+  padding: 5px;
+  z-index: 0;
+  transition: 0.5s ease;
 }
 
 .container-informacao {
@@ -186,5 +278,23 @@ export default {
 
 .conteudo-informacao {
   margin-left: 20px;
+}
+
+@media (max-width: 750px) {
+  .card-informacao {
+    width: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-informacao {
+    width: 400px;
+  }
+}
+
+@media (max-width: 500px) {
+  .card-informacao {
+    width: 300px;
+  }
 }
 </style>
