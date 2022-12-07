@@ -7,7 +7,7 @@
     <div class="main-container-texto-areainicio">
       <div class="container-texto-areainicio">
         <div class="texto-areainicio">
-          ANSIEDADE NÃO É FRECURA BUSQUE AJUDA !!
+          ANSIEDADE NÃO É FRESCURA BUSQUE AJUDA !!
         </div>
         <a href="#Sintomas" class="links-texto">Principais Sintomas</a>
         <a href="#Prevencao" class="links-texto">Prevenção</a>
